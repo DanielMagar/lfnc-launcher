@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Church Cinematic Launch</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <!-- BACKGROUND GLOW -->
+  <div class="glow"></div>
+  <!-- LAUNCH SCREEN -->
+  <div class="launch-screen" id="launchScreen">
+    <img src="./logo.png" alt="Church Logo" class="logo"/>
+    <h1>LIVING FAITH NEPALI CHURCH</h1>
+    <p>Prepare your heart for His glory</p>
+    <button id="launchBtn">Click To Launch Website</button>
+  </div>
+  <!-- COUNTDOWN -->
+  <div class="countdown-screen hidden" id="countdownScreen">
+    <div id="countNumber">10</div>
+  </div>
+  <!-- REVEAL -->
+  <div class="reveal-screen hidden" id="revealScreen">
+    <div class="cross"><img src="./cross.png"/></div>
+    <h1>Jesus Christ</h1>
+    <p>The Way • The Truth • The Life</p>
+  </div>
+  <canvas id="fireworks"></canvas>
+  <!-- AUDIO -->
+  <audio id="whooshSound" src="whoosh.mp3" preload="auto"></audio>
+  <audio id="hallelujahSound" src="hallelujah.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+  
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+body {
+  height: 100vh;
+  background: radial-gradient(circle at top, #1B0B2E, #05010A);
+  color: white;
+  overflow: hidden;
+  text-align: center;
+}
+/* GLOW BACKDROP */
+.glow {
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  background: linear-gradient(135deg, #EF4444, #9333EA);
+  filter: blur(200px);
+  opacity: 0.35;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+/* SCREENS */
+.launch-screen,
+.countdown-screen,
+.reveal-screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* LAUNCH */
+.launch-screen h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #EF4444, #9333EA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.launch-screen p {
+  color: #D1D5DB;
+  margin-bottom: 30px;
+}
+button {
+  padding: 16px 44px;
+  font-size: 1.1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(90deg, #EF4444, #9333EA);
+  box-shadow: 0 0 40px rgba(147, 51, 234, 0.8);
+  transition: transform 0.3s ease;
+}
+button:hover {
+  transform: scale(1.06);
+}
+/* COUNTDOWN */
+#countNumber {
+  font-size: 12rem;
+  font-weight: 800;
+  background: linear-gradient(180deg, #EF4444, #9333EA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: countdownPulse 1s ease-in-out infinite;
+}
+/* REVEAL */
+.cross {
+  font-size: 22rem; /* VERY BIG – cinematic */
+  line-height: 1;
+  margin-bottom: 10px;
+  color: white;
+  text-shadow:
+    0 0 40px rgba(255,255,255,0.9),
+    0 0 80px rgba(147,51,234,0.9);
+  animation: crossReveal 2.2s ease forwards;
+}
+.reveal-screen h1 {
+  font-size: 3.2rem;
+  margin-top: -10px;
+}
+.reveal-screen p {
+  margin-top: 6px;
+  color: #D1D5DB;
+  letter-spacing: 1px;
+}
+/* UTIL */
+.hidden {
+  display: none;
+}
+#fireworks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  pointer-events: none;
+}
+
+/* ===============================
+   LOGO GLOW EFFECT
+   =============================== */
+
+.logo {
+  width: 140px;              /* adjust if needed */
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4));
+  animation: logoGlow 3s ease-in-out infinite;
+}
+
+/* Soft holy glow animation */
+@keyframes logoGlow {
+  0% {
+    filter:
+      drop-shadow(0 0 6px rgba(255, 215, 0, 0.3))
+      drop-shadow(0 0 12px rgba(255, 215, 0, 0.2));
+    transform: scale(1);
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 14px rgba(255, 215, 0, 0.6))
+      drop-shadow(0 0 28px rgba(255, 215, 0, 0.4));
+    transform: scale(1.03);
+  }
+  100% {
+    filter:
+      drop-shadow(0 0 6px rgba(255, 215, 0, 0.3))
+      drop-shadow(0 0 12px rgba(255, 215, 0, 0.2));
+    transform: scale(1);
+  }
+}
+
+/* ANIMATIONS */
+@keyframes countdownPulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+@keyframes crossReveal {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
