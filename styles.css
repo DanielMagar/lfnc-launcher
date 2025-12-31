@@ -136,7 +136,23 @@ button:hover {
     transform: scale(1);
   }
 }
+.new-year {
+  margin-top: 18px;
+  font-size: 1.8rem;
+  color: gold;
+  font-weight: 600;
+  letter-spacing: 1px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
 
+@keyframes glow {
+  from {
+    text-shadow: 0 0 6px gold;
+  }
+  to {
+    text-shadow: 0 0 22px gold;
+  }
+}
 /* ANIMATIONS */
 @keyframes countdownPulse {
   0% { transform: scale(1); opacity: 0.7; }
