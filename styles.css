@@ -137,12 +137,27 @@ button:hover {
   }
 }
 .new-year {
-  margin-top: 18px;
+  margin-top: 22px;
   font-size: 1.8rem;
   color: gold;
   font-weight: 600;
   letter-spacing: 1px;
   animation: glow 2s ease-in-out infinite alternate;
+}
+.glow-text {
+  margin-top: 2rem;
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-align: center;
+  color: #ffd700; /* rich gold */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  text-shadow:
+    0 0 5px rgba(255, 215, 0, 0.6),
+    0 0 15px rgba(255, 215, 0, 0.5),
+    0 0 30px rgba(255, 170, 0, 0.4),
+    0 0 60px rgba(255, 140, 0, 0.3);
 }
 
 @keyframes glow {
